@@ -47,10 +47,10 @@ function simulateAnnealing(){
   //0 = original, or old; 1 = new
   var solution0 = generateRandomSolution();
   var cost0 = calculateCost(solution0);
-  var solution1, cost1, ap;
-  var T = 1.0;
+  var solution1, cost1, ap; //ap is the acceptance probability variable that holds the results from the acceptance_probability function
+  var T = 1.0; //"Temperature" from the example
   var T_min = 0.00001;
-  var alpha = 0.9;
+  var alpha = 0.9; //Going down by essentially 10%, 100 times ("while i<=100")
   var i = 1;
 
   while(T>T_min){
